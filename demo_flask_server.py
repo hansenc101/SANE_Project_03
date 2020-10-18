@@ -26,8 +26,17 @@ class FlaskServer(QThread):
     @app.route('/set_text', methods=['POST'])
     def Set_Text():
         print (flask.request.json)
-        UI.btnCalculate.setText(flask.request.json['button'])
-        UI.statusbar.showMessage(flask.request.json['status'])
+        UI.btnCalculate.setText(flask.request.json['button']) # Get the text for the field 'button'
+        UI.statusbar.showMessage(flask.request.json['status']) # Get the text for the field 'status'
+        UI.lblOutput.setText("Ah Count: " + flask.request.json['ahCount']) # Get the text for the field 'ahCount'
+        return flask.jsonify(flask.request.json)
+
+    @app.route('/set_color', methods=['POST'])
+    def Set_Color():
+        BG_Color = "rgb(" + str(flask.request.json['red']) + "," + str(flask.request.json['green']) + "," + str(flask.request.json['blue']) + ");"
+        FG_Color = "rgb(255,255,255);"
+
+        UI.lblOutput.setStyleSheet("QLabel {background-color :" + BG_Color + "color : " + FG_Color + "}")
         return flask.jsonify(flask.request.json)
 
 
