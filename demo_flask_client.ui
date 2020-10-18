@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>443</width>
-    <height>419</height>
+    <width>437</width>
+    <height>474</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,7 +15,7 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout_2">
-    <item row="1" column="0">
+    <item row="0" column="0">
      <widget class="QFrame" name="frame">
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
@@ -34,22 +34,15 @@
          </property>
         </widget>
        </item>
-       <item row="2" column="0" colspan="2">
-        <widget class="QPushButton" name="decrementBtn">
-         <property name="text">
-          <string>Decrement</string>
-         </property>
-        </widget>
-       </item>
        <item row="4" column="0">
-        <widget class="QLabel" name="label_2">
+        <widget class="QLabel" name="greenLabel">
          <property name="text">
           <string>Green</string>
          </property>
         </widget>
        </item>
        <item row="5" column="0">
-        <widget class="QLabel" name="label_3">
+        <widget class="QLabel" name="blueLabel">
          <property name="text">
           <string>Blue</string>
          </property>
@@ -65,7 +58,45 @@
          </property>
         </widget>
        </item>
-       <item row="0" column="0" colspan="2">
+       <item row="3" column="0">
+        <widget class="QLabel" name="redLabel">
+         <property name="text">
+          <string>Red</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QSlider" name="blueSlider">
+         <property name="maximum">
+          <number>255</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="2">
+        <widget class="QLabel" name="redMagLabel">
+         <property name="text">
+          <string>Red: 0</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0" colspan="3">
+        <widget class="QPushButton" name="incrementBtn">
+         <property name="text">
+          <string>Increment</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0" colspan="3">
+        <widget class="QPushButton" name="decrementBtn">
+         <property name="text">
+          <string>Decrement</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0" colspan="3">
         <widget class="QLabel" name="lblOutput">
          <property name="font">
           <font>
@@ -82,27 +113,17 @@
          </property>
         </widget>
        </item>
-       <item row="3" column="0">
-        <widget class="QLabel" name="label">
+       <item row="4" column="2">
+        <widget class="QLabel" name="greenMagLabel">
          <property name="text">
-          <string>Red</string>
+          <string>Green: 0</string>
          </property>
         </widget>
        </item>
-       <item row="5" column="1">
-        <widget class="QSlider" name="blueSlider">
-         <property name="maximum">
-          <number>255</number>
-         </property>
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0" colspan="2">
-        <widget class="QPushButton" name="incrementBtn">
+       <item row="5" column="2">
+        <widget class="QLabel" name="blueMagLabel">
          <property name="text">
-          <string>Increment</string>
+          <string>Blue: 0</string>
          </property>
         </widget>
        </item>
@@ -116,7 +137,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>443</width>
+     <width>437</width>
      <height>31</height>
     </rect>
    </property>
